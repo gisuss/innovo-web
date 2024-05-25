@@ -1,0 +1,69 @@
+---
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
+import { ViewTransitions } from "astro:transitions"
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon_innovo.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="relative text-black dark:text-white">
+		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+		<Header />
+		<slot />
+		<Footer />
+
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+	</body>
+</html>
+
+<style is:global>
+	@font-face {
+		font-family: 'Gilroy_EB';
+		src: url('/public/fonts/Gilroy-ExtraBold.otf') format('otf');
+	}
+	@font-face {
+		font-family: 'Gilroy_L';
+		src: url('/public/fonts/Gilroy-Light.otf') format('otf');
+	}
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		font-family: system-ui, sans-serif, 'Gilroy_EB', 'Gilroy_L';
+		scroll-behavior: smooth;
+	}
+	body {
+		color: rgba(17, 17, 17, 0.9);
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		overscroll-behavior: none;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		body {
+			color: rgba(255, 255, 255, 0.9);
+		}
+	}
+</style>
