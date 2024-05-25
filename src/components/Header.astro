@@ -1,24 +1,7 @@
 ---
-import Nav from "./Nav.astro";
-import FormContact from "./FormContact.astro";
+import Nav from "@/components/Nav.astro";
 ---
 <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
 <Nav />
-
-<div class="overflow-hidden py-6 sm:py-24">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-      <div class="lg:pr-8 lg:pt-4">
-        <div class="lg:max-w-lg">
-          <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">Somos <br><span class="text-purple-400">LA CONEXIÓN</span></p>
-          <p class="mt-2 text-3xl tracking-tight text-white sm:text-2xl">ENTRE TU EMPRESA Y EL ÉXITO</span></p>
-          
-          <FormContact />
-        </div>
-      </div>
-      <img src="/images/banner_1.webp" alt="Banner 1" class=" rounded-xl  md:-ml-4 lg:-ml-0" width="1000" height="100">
-    </div>
-  </div>
-</div>
   

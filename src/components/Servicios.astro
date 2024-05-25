@@ -1,0 +1,45 @@
+---
+import Card from '@/components/Card.astro';
+---
+
+<div class="my-10 md:my-24">
+    <img class="h-auto w-20 sm:w-44 md:w-56 mx-auto" src="/images/cohete.webp" alt="ilustracion de cohete">
+    <p class="mt-4 mb-4 text-3xl font-bold tracking-tight text-white text-center sm:text-5xl" style="font-family: Gilroy_EB;">UN SERVICIO INSUPERABLE</p>
+    <p class="mt-4 mb-4 text-xl font-medium tracking-tight text-white text-center" style="font-family: Gilroy_L;">Desde estrategias innovadoras hasta soluciones tecnológicas personalizadas, estamos aquí para potenciar tu crecimiento y éxito.</p>
+    
+    <ul role="list" class="my-16 link-card-grid">
+        <Card
+            imagePath="/src/assets/card_marketing.svg"
+            title="Marketing Digital"
+            altText="Ilustracion de Marketing"
+            body="Transforma e impulsa tu marca en canales digitales a través de estrategias de marketing y multiplica las oportunidades de tu negocio."
+        />
+        <Card
+            imagePath="/src/assets/card_web.svg"
+            title="Desarrollo Web"
+            altText="Ilustracion de Desarrollo Web"
+            body="Nos mantenemos al día con las últimas tendencias y tecnologías para ofrecerte siempre lo mejor."
+        />
+        <Card
+            imagePath="/src/assets/card_identidad.svg"
+            title="Identidad de Marca"
+            altText="Ilustracion de Identidad de Marca"
+            body="El branding es mucho más que un simple logotipo, conviértete en una marca reconocible por tus clientes."
+        />
+        <Card
+            imagePath="/src/assets/card_pedidos.svg"
+            title="Sistemas de Pedidos"
+            altText="Ilustracion de Sistemas de Pedidos"
+            body="Nuestras soluciones personalizadas te ayudarán a mejorar la experiencia del cliente y optimizar tus operaciones."
+        />
+    </ul>
+</div>
+
+<style>
+    .link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
